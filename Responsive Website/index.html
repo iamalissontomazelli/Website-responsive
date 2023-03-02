@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Navbar Responsiva</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar"> <!--Inserindo navbar-->
+        <div class="logo"><a href="#">Dev Improv3</a></div>
+        <ul class="links"> <!--Inserindo links-->
+          <li><a href="hero">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu open">
+        <li><a href="hero">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="#" class="action_btn">Get Started</a></li>
+      </div>
+    </header>
+      <main>
+        <section id="hero">
+          <h1>Welcome</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita a ullam, eveniet aliquam, modi consectetur <br> iusto pariatur numquam totam, accusamus repudiandae quia? Laborum, possimus. Quia atque cumque consectetur maxime repellendus!</p>
+        </section>
+      </main>
+
+
+
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropoDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function() {
+          dropoDownMenu.classList.toggle('open')
+          const isOpen = dropoDownMenu.classList.contains('open')
+
+          toggleBtnIcon.classList = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+        }
+      </script>
+    </body>
+</html>
